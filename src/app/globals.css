@@ -19,8 +19,48 @@
   }
 }
 
+html {
+  scroll-padding-top: 100px; /* offset for sticky navbar */
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Custom scrollbar for FAQ section */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #666666;
+}
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #333333 transparent;
+}
+
+/* ── Contact field highlight (triggered from FAQ ASK button) ── */
+@keyframes field-highlight {
+  0%   { box-shadow: 0 0 0 0px rgba(255,255,255,0); background-color: transparent; }
+  15%  { box-shadow: 0 0 0 3px rgba(255,255,255,0.35), 0 0 24px 4px rgba(255,255,255,0.12); background-color: rgba(255,255,255,0.06); }
+  60%  { box-shadow: 0 0 0 2px rgba(255,255,255,0.2),  0 0 16px 2px rgba(255,255,255,0.07); background-color: rgba(255,255,255,0.03); }
+  100% { box-shadow: 0 0 0 0px rgba(255,255,255,0); background-color: transparent; }
+}
+
+.field-highlight {
+  animation: field-highlight 1.8s ease-out forwards;
+  border-radius: 6px;
+}
+
