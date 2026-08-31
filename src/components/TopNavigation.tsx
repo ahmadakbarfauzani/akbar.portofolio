@@ -61,7 +61,6 @@ export default function TopNavigation() {
 
   const navItems = [
     { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
     { name: "Certification", href: "#track-record" },
     { name: "FAQs", href: "#faqs" },
   ];

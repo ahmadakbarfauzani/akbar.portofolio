@@ -1,12 +1,24 @@
+"use client";
+
 import { ArrowUpRight } from "lucide-react";
+import { globalLenis } from "./SmoothScrollProvider";
 
 export default function ActionButtons() {
+  const handleBookCall = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (globalLenis) {
+      globalLenis.scrollTo("#contact", { offset: -100 });
+    } else {
+      const target = document.querySelector("#contact");
+      if (target) target.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="flex flex-col gap-3 mt-4 mb-6 md:my-8">
       <a
-        href="https://wa.me/6281389213295?text=Hi%2C%20I%27d%20like%20to%20book%20a%20call%20with%20you!"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="#contact"
+        onClick={handleBookCall}
         className="flex items-center justify-between w-full max-w-full md:max-w-[240px] bg-neutral-900 border border-neutral-700 text-white px-6 py-3 rounded-full font-bold uppercase tracking-wider text-sm transition-all hover:scale-[1.03] hover:bg-red-950 hover:border-red-500 group"
       >
         Book a call
