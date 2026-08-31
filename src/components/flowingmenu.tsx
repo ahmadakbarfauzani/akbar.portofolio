@@ -171,7 +171,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
                             </span>
                             <div
                                 className="w-[120px] h-[40px] my-2 mx-2 rounded-full bg-cover bg-center"
-                                style={{ backgroundImage: `url(${image})` }}
+                                style={{ backgroundImage: `url('${image}')` }}
                             />
                         </div>
                     ))}
