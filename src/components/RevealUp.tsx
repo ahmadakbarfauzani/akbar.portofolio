@@ -22,12 +22,17 @@ export default function RevealUp({
     <motion.div
       className={className}
       initial={{ opacity: 0, y: distance }}
-      animate={{ opacity: 1, y: 0 }}
+      // 1. Ganti 'animate' jadi 'whileInView'
+      whileInView={{ opacity: 1, y: 0 }}
+      // 2. Tambahkan viewport agar memori hemat
+      viewport={{ once: true, margin: "-50px" }}
       transition={{
         duration,
         delay,
         ease: [0.25, 0.46, 0.45, 0.94],
       }}
+      // 3. Paksa GPU untuk bersiap
+      style={{ willChange: "transform, opacity" }}
     >
       {children}
     </motion.div>
