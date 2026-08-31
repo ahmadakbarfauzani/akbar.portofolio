@@ -5,12 +5,38 @@ import { motion } from "framer-motion";
 import { globalLenis } from "@/components/SmoothScrollProvider";
 
 export default function FaqsSection() {
-  // Generate 6 identical FAQs to enable scrolling as requested
-  const faqs = Array.from({ length: 6 }).map((_, i) => ({
-    id: i,
-    q: "Q: Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
-    a: "A: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-  }));
+  const faqs = [
+    {
+      id: 0,
+      q: "What services do you offer?",
+      a: "I offer UI/UX design, brand identity, web design, and motion graphics. Whether you need a full product design from scratch or just a visual refresh, I've got you covered.",
+    },
+    {
+      id: 1,
+      q: "How long does a typical project take?",
+      a: "It depends on the scope. A landing page design usually takes 3–5 days, while a full product or brand identity project can take 2–4 weeks. I'll give you a clear timeline before we start.",
+    },
+    {
+      id: 2,
+      q: "How many revisions do I get?",
+      a: "Each project includes up to 3 rounds of revisions. Additional revisions beyond that are billed at an hourly rate. I find that 3 rounds is usually more than enough to get things perfect.",
+    },
+    {
+      id: 3,
+      q: "What does the collaboration process look like?",
+      a: "We start with a discovery call to align on goals, then I move into research and initial concepts. You'll review and give feedback, and we iterate until the design is exactly right before final delivery.",
+    },
+    {
+      id: 4,
+      q: "Do you work with international clients?",
+      a: "Absolutely. I work with clients worldwide and am comfortable collaborating across time zones. Most communication happens async via email or Notion, with video calls scheduled as needed.",
+    },
+    {
+      id: 5,
+      q: "What files will I receive at the end?",
+      a: "You'll receive all source files (Figma, AI, or PSD depending on the project), plus export-ready assets in the formats you need — PNG, SVG, PDF, WebP, and more.",
+    },
+  ];
 
   return (
     <section id="faqs" className="py-12 md:py-24 mb-8 md:mb-12">
