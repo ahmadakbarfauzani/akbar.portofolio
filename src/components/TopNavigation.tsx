@@ -79,7 +79,12 @@ export default function TopNavigation() {
   };
 
   return (
-    <nav className="flex justify-between items-center w-full sticky top-0 z-50 py-6 px-6 md:px-12 lg:px-20 bg-black/80 backdrop-blur-md">
+    <motion.nav
+      className="flex justify-between items-center w-full sticky top-0 z-50 py-6 px-6 md:px-12 lg:px-20 bg-black/80 backdrop-blur-md"
+      initial={{ opacity: 0, y: -24 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+    >
       {/* Identity Header / Brand */}
       <div className="flex flex-col gap-1">
         <a
@@ -150,6 +155,6 @@ export default function TopNavigation() {
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </motion.nav>
   );
 }

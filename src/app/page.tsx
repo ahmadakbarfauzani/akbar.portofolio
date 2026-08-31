@@ -11,6 +11,7 @@ import ServicesSection from "@/components/ServicesSection";
 import TrackRecordSection from "@/components/TrackRecordSection";
 import FaqsSection from "@/components/FaqsSection";
 import FooterSection from "@/components/FooterSection";
+import RevealUp from "@/components/RevealUp";
 
 export default function Home() {
   return (
@@ -21,17 +22,31 @@ export default function Home() {
 
         {/* Left Column (Sticky Sidebar) */}
         <aside className="w-full md:w-[35%] lg:w-[30%] flex flex-col md:sticky md:top-[120px] h-auto md:h-[calc(100vh-160px)]">
-          <ActionButtons />
-          <ValueProposition />
-          <SocialContainer />
+          <RevealUp delay={0.15} duration={0.7}>
+            <ActionButtons />
+          </RevealUp>
+          <RevealUp delay={0.25} duration={0.7}>
+            <ValueProposition />
+          </RevealUp>
+          <RevealUp delay={0.35} duration={0.7} className="mt-auto">
+            <SocialContainer />
+          </RevealUp>
         </aside>
 
         {/* Right Column (Scrollable Content) */}
         <section className="w-full md:w-[65%] lg:w-[70%] flex flex-col">
-          <HeroIntro />
-          <PrimaryProject />
-          <SecondaryProjects />
-          <ClosingStatement />
+          <RevealUp delay={0.2} duration={0.8} distance={50}>
+            <HeroIntro />
+          </RevealUp>
+          <RevealUp delay={0.35} duration={0.8} distance={50}>
+            <PrimaryProject />
+          </RevealUp>
+          <RevealUp delay={0.45} duration={0.8} distance={50}>
+            <SecondaryProjects />
+          </RevealUp>
+          <RevealUp delay={0.55} duration={0.8} distance={50}>
+            <ClosingStatement />
+          </RevealUp>
         </section>
 
       </div>

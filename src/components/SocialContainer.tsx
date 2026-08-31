@@ -1,6 +1,6 @@
 export default function SocialContainer() {
   return (
-    <div className="mt-auto pt-16">
+    <div className="pt-16">
       <h3 className="text-sm uppercase tracking-widest text-neutral-500 mb-5 font-bold">
         Where you can find me
       </h3>
