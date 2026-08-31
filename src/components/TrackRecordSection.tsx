@@ -10,19 +10,19 @@ export default function TrackRecordSection() {
       title: "Dinas Pemuda dan Olahraga Kab.Bogor",
       subtitle: "Creative Team",
       date: "July - Sep 2023",
-      image: "\dsp.jpg"
+      image: "/dsp.jpg"
     },
     {
       title: "SMK Dewantara",
       subtitle: "Student",
       date: "2023 - 2026",
-      image: "\dwt (1).jpg"
+      image: "/dwt (1).jpg"
     },
     {
       title: "Graphic Design",
       subtitle: "Freelance",
       date: "2024 - Now",
-      image: "\dg.jpg"
+      image: "/dg.jpg"
     },
     {
       title: "BNSP Certification",
