@@ -6,7 +6,6 @@ interface MenuItemData {
     subtitle: string;
     date: string;
     image: string;
-    link?: string;
 }
 
 interface FlowingMenuProps {
@@ -50,7 +49,6 @@ const MenuItem: React.FC<MenuItemProps> = ({
     subtitle,
     date,
     image,
-    link = "#",
     speed,
     marqueeBgColor,
     marqueeTextColor,
@@ -114,7 +112,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
         };
     }, [title, image, repetitions, speed]);
 
-    const handleMouseEnter = (ev: React.MouseEvent<HTMLAnchorElement>) => {
+    const handleMouseEnter = (ev: React.MouseEvent<HTMLDivElement>) => {
         if (!itemRef.current || !marqueeRef.current || !marqueeInnerRef.current) return;
         const rect = itemRef.current.getBoundingClientRect();
         const edge = findClosestEdge(ev.clientX - rect.left, ev.clientY - rect.top, rect.width, rect.height);
@@ -126,7 +124,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
             .to([marqueeRef.current, marqueeInnerRef.current], { y: '0%' }, 0);
     };
 
-    const handleMouseLeave = (ev: React.MouseEvent<HTMLAnchorElement>) => {
+    const handleMouseLeave = (ev: React.MouseEvent<HTMLDivElement>) => {
         if (!itemRef.current || !marqueeRef.current || !marqueeInnerRef.current) return;
         const rect = itemRef.current.getBoundingClientRect();
         const edge = findClosestEdge(ev.clientX - rect.left, ev.clientY - rect.top, rect.width, rect.height);
@@ -142,11 +140,10 @@ const MenuItem: React.FC<MenuItemProps> = ({
         <div className="relative overflow-hidden rounded-xl border-b border-neutral-800" ref={itemRef}>
 
             {/* DESAIN ASLI MILIKMU (Base Layer) */}
-            <a
-                href={link}
+            <div
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                className="group flex flex-col sm:flex-row sm:justify-between sm:items-center py-6 hover:bg-white/[0.02] transition-colors duration-300 px-4 cursor-pointer relative z-10 w-full"
+                className="group flex flex-col sm:flex-row sm:justify-between sm:items-center py-6 hover:bg-white/[0.02] transition-colors duration-300 px-4 relative z-10 w-full"
             >
                 <div className="flex flex-col">
                     <h3 className="text-lg font-medium text-white">{title}</h3>
@@ -155,7 +152,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
                 <span className="text-neutral-500 text-sm mt-2 sm:mt-0 whitespace-nowrap">
                     {date}
                 </span>
-            </a>
+            </div>
 
             {/* ANIMASI REACT BITS (Overlay Marquee saat Hover) */}
             <div
