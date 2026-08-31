@@ -5,7 +5,7 @@ export default function PrimaryProject() {
     <div className="mb-6 md:mb-10 group cursor-pointer relative overflow-hidden rounded-2xl">
       <div className="relative w-full aspect-[4/3] md:aspect-[16/9] overflow-hidden rounded-2xl">
         <Image
-          src="/mock3.jpg"
+          src="/mock3 (1).jpg"
           alt="Valorant Themed Layout"
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-105"
