@@ -76,7 +76,7 @@ export default function BrandIdentityPage() {
                 />
               </div>
               <p className="text-[#A0A0A0] text-sm leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                A tri-fold brochure design balancing corporate identity with clean, accessible information hierarchy.
               </p>
             </div>
           </RevealUp>
@@ -93,7 +93,7 @@ export default function BrandIdentityPage() {
                 />
               </div>
               <p className="text-[#A0A0A0] text-sm leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                Minimalist business card layout emphasizing brand colors and modern typographic details.
               </p>
             </div>
           </RevealUp>
@@ -110,7 +110,7 @@ export default function BrandIdentityPage() {
                 />
               </div>
               <p className="text-[#A0A0A0] text-sm leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                Official letterhead design maintaining consistent branding across formal company communications.
               </p>
             </div>
           </RevealUp>
@@ -127,7 +127,7 @@ export default function BrandIdentityPage() {
                 />
               </div>
               <p className="text-[#A0A0A0] text-sm leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                Merchandise mockup applying the core brand elements to everyday functional objects.
               </p>
             </div>
           </RevealUp>

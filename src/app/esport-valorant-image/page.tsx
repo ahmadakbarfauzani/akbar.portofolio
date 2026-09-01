@@ -76,7 +76,7 @@ export default function EsportValorantImagePage() {
                 />
               </div>
               <p className="text-[#A0A0A0] text-sm leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                A dynamic cover spread capturing the high-octane energy of competitive esports, featuring bold, layered typography.
               </p>
             </div>
           </RevealUp>
@@ -93,7 +93,7 @@ export default function EsportValorantImagePage() {
                 />
               </div>
               <p className="text-[#A0A0A0] text-sm leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                Internal spread focusing on player profiles and stats, using a grid system to organize complex data clearly.
               </p>
             </div>
           </RevealUp>
@@ -110,7 +110,7 @@ export default function EsportValorantImagePage() {
                 />
               </div>
               <p className="text-[#A0A0A0] text-sm leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                Tactical breakdown section with custom iconography and high-contrast maps for strategic analysis.
               </p>
             </div>
           </RevealUp>
@@ -127,7 +127,7 @@ export default function EsportValorantImagePage() {
                 />
               </div>
               <p className="text-[#A0A0A0] text-sm leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                The back cover design, maintaining the edgy aesthetic while providing essential publication details.
               </p>
             </div>
           </RevealUp>

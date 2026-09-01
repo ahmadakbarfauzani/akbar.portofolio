@@ -75,7 +75,7 @@ export default function UiUxDesignPage() {
                 />
               </div>
               <p className="text-[#A0A0A0] text-sm leading-relaxed max-w-2xl mx-auto text-center mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                A comprehensive showcase of the UI/UX design process, from wireframing and user flow architecture to the final polished interface, emphasizing intuitive navigation and accessibility.
               </p>
             </div>
           </RevealUp>

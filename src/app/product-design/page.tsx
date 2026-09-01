@@ -74,7 +74,7 @@ export default function ProductDesignPage() {
                 />
               </div>
               <p className="text-[#A0A0A0] text-sm leading-relaxed max-w-2xl mx-auto text-center mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                Detailed product presentation highlighting the physical design, ergonomics, and material choices, bringing the concept from sketches to a realistic rendering.
               </p>
             </div>
           </RevealUp>
