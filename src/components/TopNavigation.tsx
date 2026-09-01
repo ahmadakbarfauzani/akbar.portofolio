@@ -3,6 +3,7 @@
 import { ChevronRight, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { globalLenis } from "./SmoothScrollProvider";
 
@@ -10,12 +11,14 @@ function NavLink({
   href,
   children,
   onClick,
-  showUnderline = true
+  showUnderline = true,
+  router
 }: {
   href: string;
   children: React.ReactNode;
   onClick?: () => void;
   showUnderline?: boolean;
+  router: ReturnType<typeof useRouter>;
 }) {
   const [hovered, setHovered] = useState(false);
 
@@ -27,7 +30,7 @@ function NavLink({
       const targetId = href.replace(/^\/?#/, '#');
 
       if (!isHomePage) {
-        window.location.assign(`/${targetId}`);
+        router.push(`/${targetId}`);
         return;
       }
 
@@ -67,6 +70,7 @@ function NavLink({
 }
 
 export default function TopNavigation() {
+  const router = useRouter();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
@@ -113,11 +117,11 @@ export default function TopNavigation() {
       <ul className="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-widest">
         {navItems.map((item) => (
           <li key={item.name}>
-            <NavLink href={item.href}>{item.name}</NavLink>
+            <NavLink href={item.href} router={router}>{item.name}</NavLink>
           </li>
         ))}
         <li>
-          <NavLink href="/#contact" showUnderline={false}>
+          <NavLink href="/#contact" showUnderline={false} router={router}>
             <span className="flex items-center gap-1 text-white">
               Get in Touch <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </span>
@@ -148,13 +152,13 @@ export default function TopNavigation() {
             <ul className="flex flex-col gap-6 text-sm font-bold uppercase tracking-widest text-center">
               {navItems.map((item) => (
                 <li key={item.name}>
-                  <NavLink href={item.href} onClick={() => setIsMobileMenuOpen(false)}>
+                  <NavLink href={item.href} onClick={() => setIsMobileMenuOpen(false)} router={router}>
                     {item.name}
                   </NavLink>
                 </li>
               ))}
               <li>
-                <NavLink href="/#contact" onClick={() => setIsMobileMenuOpen(false)} showUnderline={false}>
+                <NavLink href="/#contact" onClick={() => setIsMobileMenuOpen(false)} showUnderline={false} router={router}>
                   <span className="flex items-center justify-center gap-1 text-red-500">
                     Get in Touch <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </span>
