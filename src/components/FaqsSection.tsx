@@ -62,7 +62,7 @@ export default function FaqsSection() {
             className="text-3xl md:text-5xl font-medium leading-[1.1] tracking-tight text-white mb-10"
           >
             Still on the fence?<br />
-            Let's clear things up.
+            Let&apos;s clear things up.
           </motion.h3>
 
           <motion.button

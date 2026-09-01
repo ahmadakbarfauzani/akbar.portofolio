@@ -83,9 +83,9 @@ export default function ServicesSection() {
           <div className="absolute top-0 right-0 w-32 h-32 opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-400 to-transparent blur-2xl rounded-full" />
 
           <div className="relative z-10">
-            <h3 className="text-black text-2xl font-bold tracking-tight mb-4 leading-tight">LET'S<br />COLLABORATE</h3>
+            <h3 className="text-black text-2xl font-bold tracking-tight mb-4 leading-tight">LET&apos;S<br />COLLABORATE</h3>
             <p className="text-black/80 text-sm leading-relaxed">
-              Have a project in mind? Let's build something exceptional together.
+              Have a project in mind? Let&apos;s build something exceptional together.
             </p>
           </div>
 

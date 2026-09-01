@@ -69,7 +69,7 @@ export default function TrackRecordSection() {
         className="py-8 px-4"
       >
         <p className="text-neutral-300 text-sm leading-relaxed">
-          Currently pursuing my Bachelor's in Multimedia Engineering Technology at Politeknik Media Kreatif
+          Currently pursuing my Bachelor&apos;s in Multimedia Engineering Technology at Politeknik Media Kreatif
         </p>
       </motion.div>
     </section>

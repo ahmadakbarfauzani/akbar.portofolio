@@ -5,36 +5,6 @@ import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 import { sendEmail, type SendEmailState } from "@/app/actions/send-email";
 
-// ─── Icon helpers ────────────────────────────────────────────────────────────
-
-function InstagramIcon(props: React.ComponentProps<"svg">) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-    </svg>
-  );
-}
-
-function LinkedinIcon(props: React.ComponentProps<"svg">) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-      <rect x="2" y="9" width="4" height="12"></rect>
-      <circle cx="4" cy="4" r="2"></circle>
-    </svg>
-  );
-}
-
-function BehanceIcon(props: React.ComponentProps<"svg">) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" {...props}>
-      <path d="M8.2 9.5h-2.1v-2.3h2.1c1.3 0 2 .5 2 1.2 0 .8-.7 1.1-2 1.1zm.5 5.5h-2.6v-2.9h2.6c1.6 0 2.3.6 2.3 1.5 0 .9-.8 1.4-2.3 1.4zm13.1-4c-.1-3.3-2.6-4.9-5.3-4.9-3.2 0-5.5 2.5-5.5 5.6 0 3.3 2.2 5.5 5.5 5.5 2.6 0 4.6-1.5 5.2-3.8h-2.6c-.3 1-1.2 1.5-2.5 1.5-1.7 0-2.6-1.2-2.7-2.9h8l.1-.3c0-.3 0-.6-.2-.7zm-8 1c.1-1.3 1.1-2.4 2.6-2.4 1.4 0 2.4 1 2.5 2.4h-5.1zm-3.5-7.7h-7v14h7.1c3.8 0 6.1-2 6.1-4.8 0-1.8-1.1-3.1-2.7-3.6 1.3-.6 2-1.8 2-3.2 0-2.4-2-2.4-5.5-2.4z" />
-    </svg>
-  );
-}
-
 // ─── Send-button icon ─────────────────────────────────────────────────────────
 
 function ArrowRightIcon(props: React.ComponentProps<"svg">) {

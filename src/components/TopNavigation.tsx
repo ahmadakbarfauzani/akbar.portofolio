@@ -3,6 +3,7 @@
 import { ChevronRight, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import Link from "next/link";
 import { globalLenis } from "./SmoothScrollProvider";
 
 function NavLink({
@@ -19,12 +20,21 @@ function NavLink({
   const [hovered, setHovered] = useState(false);
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (href.startsWith("#")) {
+        if (href.startsWith("#") || href.startsWith("/#")) {
       e.preventDefault();
+      
+      const isHomePage = window.location.pathname === '/' || window.location.pathname === '';
+      const targetId = href.replace(/^\/?#/, '#');
+
+      if (!isHomePage) {
+        window.location.assign(`/${targetId}`);
+        return;
+      }
+
       if (globalLenis) {
-        globalLenis.scrollTo(href, { offset: -100 });
+        globalLenis.scrollTo(targetId, { offset: -100 });
       } else {
-        const target = document.querySelector(href);
+        const target = document.querySelector(targetId);
         if (target) target.scrollIntoView({ behavior: "smooth" });
       }
     }
@@ -60,9 +70,9 @@ export default function TopNavigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "About", href: "#about" },
-    { name: "Certification", href: "#track-record" },
-    { name: "FAQs", href: "#faqs" },
+    { name: "About", href: "/#about" },
+    { name: "Certification", href: "/#track-record" },
+    { name: "FAQs", href: "/#faqs" },
   ];
 
   const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -86,13 +96,13 @@ export default function TopNavigation() {
     >
       {/* Identity Header / Brand */}
       <div className="flex flex-col gap-1">
-        <a
+        <Link
           href="/"
           onClick={handleLogoClick}
           className="text-lg md:text-xl font-bold tracking-tight flex items-center gap-2 uppercase hover:text-neutral-300 transition-colors"
         >
           Ahmad Akbar Fauzani
-        </a>
+        </Link>
         <div className="flex flex-col md:flex-row gap-1 md:gap-4 text-neutral-400 text-xs tracking-wide mt-1 md:mt-0">
           <p>ahmadakbarfauzani08@gmail.com</p>
           <p>+62 813 8921 3295</p>
@@ -107,7 +117,7 @@ export default function TopNavigation() {
           </li>
         ))}
         <li>
-          <NavLink href="#contact" showUnderline={false}>
+          <NavLink href="/#contact" showUnderline={false}>
             <span className="flex items-center gap-1 text-white">
               Get in Touch <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </span>
@@ -144,7 +154,7 @@ export default function TopNavigation() {
                 </li>
               ))}
               <li>
-                <NavLink href="#contact" onClick={() => setIsMobileMenuOpen(false)} showUnderline={false}>
+                <NavLink href="/#contact" onClick={() => setIsMobileMenuOpen(false)} showUnderline={false}>
                   <span className="flex items-center justify-center gap-1 text-red-500">
                     Get in Touch <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </span>

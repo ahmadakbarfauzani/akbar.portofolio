@@ -169,26 +169,29 @@ const ElasticMesh = ({
 }: ElasticMeshProps) => {
     const containerRef = useRef<HTMLDivElement | null>(null);
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const propsRef = useRef<Record<string, any>>({});
-    propsRef.current = {
-        color1,
-        color2,
-        highlight,
-        showGrid,
-        gridDensity,
-        gridOpacity,
-        gridColor,
-        borderRadius,
-        stiffness,
-        damping,
-        grabRadius,
-        pull,
-        wobble,
-        tilt,
-        shading,
-        interaction,
-        enabled
-    };
+    useEffect(() => {
+        propsRef.current = {
+            color1,
+            color2,
+            highlight,
+            showGrid,
+            gridDensity,
+            gridOpacity,
+            gridColor,
+            borderRadius,
+            stiffness,
+            damping,
+            grabRadius,
+            pull,
+            wobble,
+            tilt,
+            shading,
+            interaction,
+            enabled
+        };
+    }, [color1, color2, highlight, showGrid, gridDensity, gridOpacity, gridColor, borderRadius, stiffness, damping, grabRadius, pull, wobble, tilt, shading, interaction, enabled]);
 
     useEffect(() => {
         const container = containerRef.current as HTMLDivElement;
@@ -250,7 +253,7 @@ const ElasticMesh = ({
         });
 
         const texture = new Texture(gl, { generateMipmaps: false, flipY: false });
-        let hasImage = 0;
+        const hasImage = 0;
         if (image) {
             const img = new Image();
             img.crossOrigin = 'anonymous';

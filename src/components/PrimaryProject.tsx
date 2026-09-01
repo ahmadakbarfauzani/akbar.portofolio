@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function PrimaryProject() {
   return (
-    <div className="mb-6 md:mb-10 group cursor-pointer relative overflow-hidden rounded-2xl">
+    <Link href="/esport-valorant-image" className="block mb-6 md:mb-10 group cursor-pointer relative overflow-hidden rounded-2xl">
       <div className="relative w-full aspect-[4/3] md:aspect-[16/9] overflow-hidden rounded-2xl">
         <Image
           src="/mock3 (1).jpg"
@@ -18,6 +19,6 @@ export default function PrimaryProject() {
         <p className="text-neutral-300 text-sm tracking-wide uppercase font-bold">Esport Valorant</p>
         <p className="text-neutral-500 text-xs tracking-widest uppercase">Editorial Design</p>
       </div>
-    </div>
+    </Link>
   );
 }

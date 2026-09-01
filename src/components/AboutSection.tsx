@@ -79,7 +79,7 @@ export default function AboutSection() {
             About Me
           </span>
           <p className="text-xl md:text-2xl leading-relaxed text-neutral-300">
-            I'm Ahmad Akbar Fauzani, a Graphic Designer crafting clean, purposeful visuals. I design for clarity and impact, ensuring every project looks exceptional and functions perfectly. Let's build something great together.
+            I&apos;m Ahmad Akbar Fauzani, a Graphic Designer crafting clean, purposeful visuals. I design for clarity and impact, ensuring every project looks exceptional and functions perfectly. Let&apos;s build something great together.
           </p>
 
           <div className="relative w-full max-w-[340px] md:max-w-[400px] aspect-[4/3] rounded-2xl overflow-hidden mt-4 group cursor-pointer border border-neutral-800 bg-neutral-950 p-2 shadow-2xl transition-transform duration-500 hover:scale-[1.02]">
